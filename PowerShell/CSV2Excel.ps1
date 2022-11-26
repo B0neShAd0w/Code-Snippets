@@ -53,4 +53,8 @@ function CSV2Excel {
     }  
 }
 
+# Clear Console
+Clear-Host
+
+# Run
 CSV2Excel -InputDirectory "C:\Temp" -OutputDirectory "C:\Temp" -FileName "Test-Excel"
