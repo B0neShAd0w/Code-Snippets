@@ -50,9 +50,7 @@ function CSV2Excel {
         $null = [System.Runtime.Interopservices.Marshal]::ReleaseComObject($wb); 
         $null = [System.Runtime.Interopservices.Marshal]::ReleaseComObject($xl); 
         [System.GC]::Collect(); [System.GC]::WaitForPendingFinalizers()
-    }
-
-    
+    }  
 }
 
 CSV2Excel -InputDirectory "C:\Temp" -OutputDirectory "C:\Temp" -FileName "Test-Excel"
