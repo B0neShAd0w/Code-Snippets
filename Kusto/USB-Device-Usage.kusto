@@ -1,4 +1,4 @@
-//USB Usage extract within a specific timeframe
+//USB Device Usage
 DeviceEvents
 | where Timestamp >= ago(30d)
 | extend parsed=parse_json(AdditionalFields)
