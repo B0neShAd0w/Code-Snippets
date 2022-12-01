@@ -1,1 +1,7 @@
-
+//Report On-boarded devices
+let StartTime = ago(30d); //Set the timeframe to monitor
+DeviceInfo
+| where Timestamp >= StartTime
+| project Timestamp, ReportId, DeviceName, DeviceId, LoggedOnUsers, OnboardingStatus, DeviceCategory, DeviceType, ClientVersion, PublicIP, JoinType, IsAzureADJoined, AadDeviceId
+| partition by DeviceId ( top 1 by Timestamp )
+| order by Timestamp desc
