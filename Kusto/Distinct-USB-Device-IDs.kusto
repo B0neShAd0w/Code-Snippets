@@ -16,4 +16,4 @@ DeviceEvents
 | extend ProductId = tostring(parsed.ProductId)
 | extend VendorId = tostring(parsed.VendorId)
 | distinct DeviceInstanceId
-| project Timestamp, ReportId, InitiatingProcessAccountDomain, InitiatingProcessAccountName, InitiatingProcessAccountUpn, InitiatingProcessAccountObjectId, MediaClass, MediaDeviceId, DeviceInstanceId, MediaDescription, BusType, ClassGuid, MediaName, ProductId, VendorId, RemovableStorageAccess, RemovableStoragePolicy, RemovableStoragePolicyVerdict
+| order by DeviceInstanceId
