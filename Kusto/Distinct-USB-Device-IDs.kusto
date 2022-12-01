@@ -15,5 +15,5 @@ DeviceEvents
 | extend MediaName = tostring(parsed.MediaName)
 | extend ProductId = tostring(parsed.ProductId)
 | extend VendorId = tostring(parsed.VendorId)
-| distinct DeviceInstanceId
 | order by DeviceInstanceId
+| distinct DeviceInstanceId
