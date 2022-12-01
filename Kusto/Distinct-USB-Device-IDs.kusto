@@ -1,1 +1,19 @@
-
+//Distinct USB Device ID's
+DeviceEvents
+| where Timestamp >= ago(30d)
+| extend parsed=parse_json(AdditionalFields)
+| extend BusType = tostring(parsed.BusType)
+| where BusType == "USB" or BusType == "SCSI"
+| extend MediaClass = tostring(parsed.ClassName)
+| extend MediaDeviceId = tostring(parsed.DeviceId)
+| extend MediaDescription = tostring(parsed.DeviceDescription) 
+| extend RemovableStorageAccess = tostring(parsed.RemovableStorageAccess)
+| extend RemovableStoragePolicy = tostring(parsed.RemovableStoragePolicy)
+| extend RemovableStoragePolicyVerdict = tostring(parsed.RemovableStoragePolicyVerdict)
+| extend ClassGuid = tostring(parsed.ClassGuid)
+| extend DeviceInstanceId = tostring(parsed.DeviceInstanceId)
+| extend MediaName = tostring(parsed.MediaName)
+| extend ProductId = tostring(parsed.ProductId)
+| extend VendorId = tostring(parsed.VendorId)
+| distinct DeviceInstanceId
+| project Timestamp, ReportId, InitiatingProcessAccountDomain, InitiatingProcessAccountName, InitiatingProcessAccountUpn, InitiatingProcessAccountObjectId, MediaClass, MediaDeviceId, DeviceInstanceId, MediaDescription, BusType, ClassGuid, MediaName, ProductId, VendorId, RemovableStorageAccess, RemovableStoragePolicy, RemovableStoragePolicyVerdict
