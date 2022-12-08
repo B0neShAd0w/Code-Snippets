@@ -1,4 +1,4 @@
-# Simple code snippet to generate random user account Ids for lab testing.
+# Simple code snippet to generate random AD user account IDs for lab testing.
 $count = 10 # Number of account IDs to generate
 $min = 111111 # Starting number
 $max = 999999 # Ending number
