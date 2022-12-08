@@ -1,14 +1,13 @@
 # Simple code snippet to generate random AD user account IDs for lab testing.
-$count = 10 # Number of account IDs to generate
-$min = 111111 # Starting number
-$max = 999999 # Ending number
+$count = 10 # Number of IDs to generate
+$length = 6 # Number of numbers after letter
 
 $arr = @('a','c','m','x') # Array of First letter for ID
 
 # Run
 for ($i =0; $i -lt $count; $i++)
 {
-    (($arr) | Get-Random -Count 1 | % {[char]$_}) + (Get-random -Min $min -Maximum $max)
+    (($arr) | Get-Random -Count 1 | % {[char]$_}) + -join ((48..57)| Get-Random -Count $length | % {[char]$_})
 }
 
 # Example output
