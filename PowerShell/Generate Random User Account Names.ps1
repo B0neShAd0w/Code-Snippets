@@ -1,10 +1,11 @@
 # Simple code snippet to generate random user account Ids for lab testing.
-$count = 10
-$min = 111111
-$max = 999999
+$count = 10 # Number of account IDs to generate
+$min = 111111 # Starting number
+$max = 999999 # Ending number
 
-$arr = @('a','c','m','x')
+$arr = @('a','c','m','x') # Array of First letter for ID
 
+# Run
 for ($i =0; $i -lt $count; $i++)
 {
     (($arr) | Get-Random -Count 1 | % {[char]$_}) + (Get-random -Min $min -Maximum $max)
