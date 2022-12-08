@@ -1,5 +1,5 @@
 # Simple code snippet to generate random AD user account IDs for lab testing.
-$count = 4 # Number of IDs to generate
+$count = 10 # Number of IDs to generate
 $letterLength = 1 # Number of letters
 $numberLength = 6 # Number of numbers after letter
 
