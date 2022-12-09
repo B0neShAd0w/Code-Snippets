@@ -34,7 +34,7 @@ True
 PS C:> 'Ziggy stardust' -match 'Zigg[^abc] Star'
 True
 
-# Match anything but these characters, specify in one or more contiguous ranges [^n-m]
+# Match anything but these characters, specify in one or more contiguous ranges [^abc-ijk-xyz]
 'abc' -match '[^abc-ijk-xyz]'
 False
 
