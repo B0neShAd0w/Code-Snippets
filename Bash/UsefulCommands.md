@@ -13,5 +13,5 @@ sudo hostnamectl set-hostname NEW-HOSTNAME
 ```
  Remove Alias
  ```bash
- unalias sherlock
+ unalias ALIAS_NAME
  ```
