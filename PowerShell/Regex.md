@@ -23,6 +23,6 @@ $ :End of string
 Examples
 ```PowerShell
 # Match any (at least one) of the characters - place the options in square brackets [ ]
-'Ziggy Stardust' -match '[xyi]ggy'
+'Ziggy Stardust' -match 'Z[xyi]ggy'
 True
 ```
