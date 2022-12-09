@@ -4,7 +4,7 @@ apt list --installed
 ```
 Fully remove application
 ```bash
-sudo apt purge APPLICATION
+sudo apt purge --auto-remove APPLICATION
 ```
 
 Set a new Hostname
