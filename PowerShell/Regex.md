@@ -29,4 +29,19 @@ True
 # Match a range (at least one) of characters in a contiguous range [x-z]
 'Ziggy Stardust' -match 'Zigg[x-z] Star'
 True
+
+# Match anything but these, a caret (^) will match any character except those in brackets
+PS C:> 'Ziggy stardust' -match 'Zigg[^abc] Star'
+True
+
+# Match anything but these characters, specify in one or more contiguous ranges [^n-m]
+'abc' -match '[^abc-ijk-xyz]'
+False
+
+'abc' -match '[^ijk-xyz]'
+True
+
+# Match any one of the special characters which are Not Allowed in a SharePoint filename:
+'Ziggy Sta#rdust' -match '[~#%&*{}\\:<>?/|+"]'
+True
 ```
