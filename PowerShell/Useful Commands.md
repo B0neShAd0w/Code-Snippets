@@ -6,3 +6,6 @@ PowerShell.exe -Version 2
 # Check PS version loaded
 ($PSVersionTable).PSVersion
 ```
+
+# Check Hash of a file (SHA265)
+certUtil -hashfile C:\file.img SHA256
