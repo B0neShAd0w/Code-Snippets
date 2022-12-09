@@ -28,7 +28,13 @@ New-NetIPAddress -IPAddress 10.10.10.1 -PrefixLength 24 -InterfaceAlias "vEthern
 New-NetNAT -Name NATNetwork -InternalIPInterfaceAddressPrefix 10.10.10.0/24
 
 # Allow 'RDP' to all IP's on Host to all IP's on the NAT Network
-Add-NetNatStaticMapping -ExternalIPAddress "0.0.0.0/0" -ExternalPort 3389 -Protocol TCP -InternalIPAddress "10.10.10.0/24" -InternalPort 3389 -NatName NatNetwork
+Add-NetNatStaticMapping `
+  -ExternalIPAddress "0.0.0.0/0" `
+  -ExternalPort 3389 `
+  -Protocol TCP `
+  -InternalIPAddress "10.10.10.0/24" `
+  -InternalPort 3389 `
+  -NatName NatNetwork
 ```
 
 View Nat rules
