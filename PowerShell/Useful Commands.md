@@ -13,6 +13,29 @@ Set the ms-DS-Logon-Time-Sync-Interval (Default is not set - which is 9-14 days)
 Get-ADDomain | Set-ADDomain -LastLogonReplicationInterval "1"
 ```
 
+## Hyper-V
+```PowerShell
+# Create a new "Internal" vSwitch
+
+New-VMSwitch -SwitchName "NAT vSwitch" -SwitchType Internal
+
+# Assign IP address to the new "Internal NAT vSwitch"
+
+New-NetIPAddress -IPAddress 10.10.10.1 -PrefixLength 24 -InterfaceAlias "vEthernet (NAT vSwitch)"
+
+# Configure the network address of the NAT network
+
+New-NetNAT -Name NATNetwork -InternalIPInterfaceAddressPrefix 10.10.10.0/24
+
+# Allow 'RDP' to all IP's on Host to all IP's on the NAT Network
+Add-NetNatStaticMapping -ExternalIPAddress "0.0.0.0/0" -ExternalPort 3389 -Protocol TCP -InternalIPAddress "10.10.10.0/24" -InternalPort 3389 -NatName NatNetwork
+```
+
+View Nat rules
+```bash
+Get-NetNat
+```
+
 ## Send Mail
 Send email from within script (Using Office 365 SMTP)
 ```PowerShell
