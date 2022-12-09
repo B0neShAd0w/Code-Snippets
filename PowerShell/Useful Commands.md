@@ -45,7 +45,7 @@ Send-MailMessage `
 
 ## General
 
-Windows 11 - Add Local User (Bypass the stupid Microsoft Account garbage)
+Windows 11 Clean Install - Add Local User (Bypass the stupid Microsoft Account garbage)
 ```PowerShell
 # At the "Lets get connected" page press SHIFT+F10 to open a command prompt and run the command below:
 oobe\bypassnro
