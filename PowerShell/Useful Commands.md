@@ -45,6 +45,14 @@ Send-MailMessage `
 
 ## General
 
+Windows 11 - Add Local User (Bypass the stupid Microsoft Account garbage)
+```PowerShell
+# At the "Lets get connected" page press SHIFT+F10 to open a command prompt and run the command below:
+oobe\bypassnro
+
+# After the computer restarts a 'local account' can be used
+```
+
 Switch to PowerShell 2 engine - useful for testing if script will work on older OS (Server 2008R2).
 ```PowerShell
 # Load PowerShell 2 engine
@@ -59,10 +67,4 @@ Check Hash of a file (SHA265)
 certutil.exe -hashfile C:\file.iso SHA256
 ```
 
-Windows 11 - Add Local User (Bypass the stupid Microsoft Account garbage)
-```PowerShell
-# At the "Lets get connected" page press SHIFT+F10 to open a command prompt and run the command below:
-oobe\bypassnro
 
-# After the computer restarts a 'local account' can be used (note: without doing the above you would need to use a Microsoft account)
-```
