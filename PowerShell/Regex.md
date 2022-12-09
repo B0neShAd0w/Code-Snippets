@@ -1,5 +1,5 @@
 Regular Expressions Characters
-```PowerShell
+```
 ^ :Beginning of line (or not)
 . :Single character
 [ ] :One of a range
