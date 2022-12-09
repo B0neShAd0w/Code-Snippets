@@ -30,5 +30,5 @@ stegcracker image.jpg /usr/share/wordlists/rockyou.txt
 ```
 Crack Password protected Zip file
 ```
-fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt file.zip
+fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt file.zip -v
 ```
