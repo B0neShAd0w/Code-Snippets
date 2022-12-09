@@ -77,5 +77,7 @@ Check Hash of a file (SHA265)
 ```PowerShell
 certutil.exe -hashfile C:\file.iso SHA256
 ```
-
-
+Extract all Installed Drivers
+```powershell
+dism /online /export-driver /destination:"[DESTINATION]"
+```
