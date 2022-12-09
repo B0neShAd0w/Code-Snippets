@@ -13,6 +13,8 @@ Set the ms-DS-Logon-Time-Sync-Interval (Default is not set - which is 9-14 days)
 Get-ADDomain | Set-ADDomain -LastLogonReplicationInterval "1"
 ```
 
+---
+
 ## Hyper-V
 ```PowerShell
 # Create a new "Internal" vSwitch
@@ -41,6 +43,8 @@ View Nat rules
 ```bash
 Get-NetNat
 ```
+
+---
 
 ## Send Mail
 Send email from within script (Using Office 365 SMTP)
@@ -71,6 +75,7 @@ Send-MailMessage `
   -Credential (Get-Credential)
 ```
 
+---
 
 ## General
 
