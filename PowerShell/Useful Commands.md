@@ -1,5 +1,5 @@
 ## Active Directory
-Clear User attributes
+Clear User attribute(s)
 ```PowerShell
 # Clear the 'Info' attribute
 Set-ADUser -Identity $user -Clear Info
