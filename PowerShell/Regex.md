@@ -26,6 +26,7 @@ Examples
 'Ziggy Stardust' -match 'Z[xyi]ggy'
 True
 
-'Ziggy stardust' -match 'Z[h-j]ggy'
+# Match a range (at least one) of characters in a contiguous range [n-m]
+'Ziggy Stardust' -match 'Zigg[x-z] Star'
 True
 ```
