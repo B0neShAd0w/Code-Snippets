@@ -1,3 +1,16 @@
+## Active Directory
+Clear User attributes
+```PowerShell
+# Clear the 'Info' attribute
+Set-ADUser -Identity $user -Clear Info
+
+# Clear the 'EmailAddress' attribute
+Set-ADUser -Identity $user -EmailAddress $null
+```
+
+
+## General
+
 Switch to PowerShell 2 engine - useful for testing if script will work on older OS (Server 2008R2).
 ```PowerShell
 # Load PowerShell 2 engine
