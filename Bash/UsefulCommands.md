@@ -32,3 +32,8 @@ Crack Password protected Zip file
 ```
 fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt file.zip -v
 ```
+
+Decrypt .CPT files
+```
+ccdecrypt -K PASSWORD *.cpt*
+```
