@@ -1,4 +1,4 @@
 Set a new Hostname
 ```bash
-sudo hostnamectl set-hostname sock-puppet
+sudo hostnamectl set-hostname NEW-HOSTNAME
 ```
