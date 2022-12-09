@@ -20,3 +20,7 @@ Extract with Steghide
 ```
 steghide extract -sf image.jpg
 ```
+Bruteforce with stegcracker
+```
+stegcracker image.jpg /usr/share/wordlists/rockyou.txt
+```
