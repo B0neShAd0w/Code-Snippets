@@ -8,6 +8,10 @@ Set-ADUser -Identity $user -Clear Info
 Set-ADUser -Identity $user -EmailAddress $null
 ```
 
+Set the ms-DS-Logon-Time-Sync-Interval (Default is not set - which is 9-14 days)
+```PowerShell
+Get-ADDomain | Set-ADDomain -LastLogonReplicationInterval "1"
+```
 
 ## General
 
