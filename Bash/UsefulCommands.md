@@ -15,3 +15,8 @@ sudo hostnamectl set-hostname NEW-HOSTNAME
  ```bash
  unalias ALIAS_NAME
  ```
+
+Extract with Steghide
+```
+steghide extract -sf image.jpg
+```
