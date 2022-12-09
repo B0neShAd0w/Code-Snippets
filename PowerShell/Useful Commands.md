@@ -48,10 +48,21 @@ Send-MailMessage `
 Windows 11 Clean Install - Add Local User (Bypass the stupid Microsoft Account garbage)
 ```PowerShell
 # At the "Lets get connected" page press SHIFT+F10 to open a command prompt and run the command below:
+
 oobe\bypassnro
 
 # After the computer restarts a 'local account' can be used
 ```
+
+Windows 11 - Unsupported hardware (VM etc.)
+```PowerShell
+# Press Shift + F10 at the start of setup process. enter the following commands:
+
+reg add HKLM\System\Setup\LabConfig /v BypassTPMCheck /t reg_dword /d 1
+reg add HKLM\System\Setup\LabConfig /v BypassSecureBootCheck /t reg_dword /d 1
+reg add HKLM\System\Setup\LabConfig /v BypassRAMCheck /t reg_dword /d 1
+```
+
 
 Switch to PowerShell 2 engine - useful for testing if script will work on older OS (Server 2008R2).
 ```PowerShell
