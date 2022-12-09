@@ -13,6 +13,36 @@ Set the ms-DS-Logon-Time-Sync-Interval (Default is not set - which is 9-14 days)
 Get-ADDomain | Set-ADDomain -LastLogonReplicationInterval "1"
 ```
 
+## Send Mail
+Send email from within script (Using Office 365 SMTP)
+```PowerShell
+$expirydate = Get-date
+
+$smtpServer = "smtp.office365.com"
+$smtpPort = '587'
+$smtpSender = "sender@SomeEmail.com"
+
+
+$To = "me@SomeEmail.com"
+$Subject = "Some Subject"
+$Body = "<h1>Body Heading</h1><br><br>"
+$Body += "<h3>Main Body - First Line</h3><br><br>"
+$Body += “Main Body - more lines<br><br>”
+$Body += “Main Body - more lines<br>”
+$Body += “Main Body - more lines”
+
+Send-MailMessage `
+  -From $smtpSender `
+  -To $To `
+  -Subject $Subject `
+  -Body $Body -BodyAsHtml `
+  -SmtpServer $smtpServer `
+  -Port $smtpPort `
+  -UseSsl `
+  -Credential (Get-Credential)
+```
+
+
 ## General
 
 Switch to PowerShell 2 engine - useful for testing if script will work on older OS (Server 2008R2).
