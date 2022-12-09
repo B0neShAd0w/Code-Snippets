@@ -9,5 +9,5 @@ PowerShell.exe -Version 2
 
 Check Hash of a file (SHA265)
 ```PowerShell
-certutil.exe -hashfile C:\file.img SHA256
+certutil.exe -hashfile C:\file.iso SHA256
 ```
