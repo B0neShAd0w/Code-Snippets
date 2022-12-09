@@ -25,4 +25,7 @@ Examples
 # Match any (at least one) of the characters - place the options in square brackets [ ]
 'Ziggy Stardust' -match 'Z[xyi]ggy'
 True
+
+'Ziggy stardust' -match 'Z[h-j]ggy'
+True
 ```
