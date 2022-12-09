@@ -56,7 +56,7 @@ oobe\bypassnro
 
 Windows 11 - Unsupported hardware (VM etc.)
 ```PowerShell
-# Press Shift + F10 at the start of setup process. enter the following commands:
+# Press Shift + F10 at the start of the setup process, enter the following commands:
 
 reg add HKLM\System\Setup\LabConfig /v BypassTPMCheck /t reg_dword /d 1
 reg add HKLM\System\Setup\LabConfig /v BypassSecureBootCheck /t reg_dword /d 1
