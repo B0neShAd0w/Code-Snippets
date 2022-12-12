@@ -28,7 +28,7 @@ Extract with Steghide
 ```
 steghide extract -sf image.jpg
 ```
-Bruteforce with stegcracker
+Bruteforce with stegcracker (note: StegSeek has replaced StegCracker)
 ```
 stegcracker image.jpg /usr/share/wordlists/rockyou.txt
 ```
