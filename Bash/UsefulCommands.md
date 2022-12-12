@@ -11,8 +11,12 @@ Set a new Hostname
 ```bash
 sudo hostnamectl set-hostname NEW-HOSTNAME
 ```
- Remove Alias
+ Aliases
  ```bash
+ # Add an Alias
+ alias theharvester='python3 ~/theHarvester/theHarvester.py'
+ 
+ # Remove Alias
  unalias ALIAS_NAME
  ```
 Get Info with Steghide
