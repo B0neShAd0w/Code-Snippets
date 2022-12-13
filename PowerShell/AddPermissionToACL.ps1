@@ -1,6 +1,6 @@
 # To add the permissions on an object:
 
-$path = "C:DFS\Shares\AllUsers "
+$path = "C:\DFS\Shares\AllUsers"
 $user = "EVIL\H.Simpson"
 $Permiss = "Read, ReadAndExecute, ListDirectory"
 $InheritSettings = "Containerinherit, ObjectInherit"
