@@ -1,3 +1,13 @@
+Find files containing a string
+```bash
+find / -type f -exec grep -l -i "<STRING>" {} \; 2>/dev/null
+```
+
+Create a custom password list
+```bash
+cat /usr/share/wordlists/rockyou.txt | grep -e '^P' | grep -e '[1][2][3]$' >> passwords.txt
+```
+
 List installed applications
 ```bash
 apt list --installed
